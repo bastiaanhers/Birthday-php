@@ -1,6 +1,6 @@
 <?php
 
-require(ROOT . "model/kalenderModel.php");
+require(ROOT . "model/BirthdayModel.php");
 
 function index()
 {

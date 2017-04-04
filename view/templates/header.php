@@ -7,3 +7,8 @@
 	<link rel="stylesheet" href="<?= URL ?>">
 </head>
 <body>
+	<nav>
+		<ul>
+			<li><a href="<?= URL ?>birthday/index">Birthday</a></li>
+		</ul>
+	</nav>

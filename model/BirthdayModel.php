@@ -72,6 +72,7 @@ function deleteBirthday($id = null)
 	
 	return true;
 }
+
 function createBirthday() 
 {
 	$person = isset($_POST['person']) ? $_POST['person'] : null;
@@ -91,8 +92,8 @@ function createBirthday()
 	$query->execute(array(
 		':person' => $person,
 		':day' => $day,
-		':month' => $month
-		':year' => $year ));
+		':month' => $month,
+		':year' => $year));
 
 	$db = null;
 	

@@ -16,7 +16,7 @@
 			<td><?= $birthday['day']; ?></td>
 			<td><?= $birthday['month']; ?></td>
 			<td><?= $birthday['year']; ?></td>
-			<td><a href="<?= URL ?>birthday/edit/<?= $birthday['birtday_id'] ?>">Edit</a></td>
+			<td><a href="<?= URL ?>birthday/edit/<?= $birthday['birthday_id'] ?>">Edit</a></td>
 			<td><a href="<?= URL ?>birthday/delete/<?= $birthday['birthday_id'] ?>">Delete</a></td>
 		</tr>
 		<?php } ?>
