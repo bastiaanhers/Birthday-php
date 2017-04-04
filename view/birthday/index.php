@@ -1,26 +1,26 @@
-<div class="container">
-	<table border="1">
-		<tr>
-			<th>#</th>
-			<th>person</th>
-			<th>day</th>
-			<th>month</th>
-			<th>year</th>
+<?php
+        $month = array("", "Januari", "Februari", "Maart", "April", "Mei", "Juni", "Juli", "Augustus", "September", "Oktober", "November", "December");
+    ?>
 
-		</tr>
-		
-		<?php foreach ($birthdays as $birthday) { ?>
-		<tr>
-			<td><?= $birthday['birthday_id']; ?></td>
-			<td><?= $birthday['person']; ?></td>
-			<td><?= $birthday['day']; ?></td>
-			<td><?= $birthday['month']; ?></td>
-			<td><?= $birthday['year']; ?></td>
-			<td><a href="<?= URL ?>birthday/edit/<?= $birthday['birthday_id'] ?>">Edit</a></td>
-			<td><a href="<?= URL ?>birthday/delete/<?= $birthday['birthday_id'] ?>">Delete</a></td>
-		</tr>
-		<?php } ?>
+    <?php 
+    $currentMonth = null;
+    $currentDay = null;
 
-	</table>
-	<a href="<?= URL ?>birthday/create">Toevoegen</a>
-</div>
+    foreach($birthdays as $birthday) { ?> 
+    <?php if ($currentMonth != $birthday['month']) {
+        echo "<h1>" . $month[$birthday['month']] . "</h1>";
+        $currentMonth = $birthday['month'];
+    }
+
+    if ($currentDay != $birthday['day']) {
+         echo "<h2>" . $birthday['day'] . "</h2>";
+        $currentDay = $birthday['day'];
+    } ?>
+        <p>
+            <a href="<?php echo URL . 'birthday/edit/' . $birthday['birthday_id']; ?>">
+                <?php echo $birthday['person'] . " (" . $birthday['year'] . ")";  ?></a>
+
+            <a href="<?php echo URL . 'birthday/delete/' . $birthday['birthday_id']; ?>">x</a>
+        </p>
+    <?php } ?>
+<p><a href="<?= URL ?>birthday/create">+ Toevoegen</a></p>
