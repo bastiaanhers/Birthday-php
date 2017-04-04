@@ -10,7 +10,7 @@
 		
 		</select>
 
-		<input type="hidden" name="id" value="<?= $birthday['birtday_id']; ?>">
+		<input type="hidden" name="id" value="<?= $birthday['birthday_id']; ?>">
 		<input type="submit" value="Verzenden">
 	
 	</form>

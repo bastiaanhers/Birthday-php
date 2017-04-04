@@ -42,7 +42,7 @@ function editBirthday()
 	
 	$db = openDatabaseConnection();
 
-	$sql = "UPDATE birthdays SET person = :person, day = :day, month = :month, year = :year WHERE id = :id";
+	$sql = "UPDATE birthdays SET person = :person, day = :day, month = :month, year = :year WHERE birthday_id = :id";
 	$query = $db->prepare($sql);
 	$query->execute(array(
 		':person' => $person,

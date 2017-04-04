@@ -14,7 +14,7 @@ function create()
 	render("birthday/create");
 }
 
-/*function createSave()
+function createSave()
 {
 	if (!createBirthday()) {
 		header("Location:" . URL . "error/index");
@@ -22,7 +22,7 @@ function create()
 	}
 
 	header("Location:" . URL . "birthday/index");
-}*/
+}
 
 function edit($id)
 {
